@@ -3,28 +3,39 @@
     <title>Quadratic Grapher</title>
     <script src="grapher.js"></script>
     <link rel="stylesheet" type="text/css" href="grapher.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body onload="graph()">
     <h1>Quadratic Grapher</h1>
-    <canvas id="canv" width="300" height="300"></canvas>
-    <div>
-      Graph Color:
-      <input type="color" id="color" value="#4B0082" onchange="graph()" />
-    </div>
+    <div class="container">
+      <canvas id="canv" width="400" height="400"></canvas>
+      <div class="item">
+        <div>
+          Graph Color:
+          <input type="color" id="color" value="#4B0082" onchange="graph()" />
+        </div>
 
-    <h3>y = ax² + bx + c</h3>
-    <div>
-      a: <input type="number" id="a" value="1" step="0.1" oninput="graph()" />
-    </div>
-    <div>
-      b: <input type="number" id="b" value="0" step="0.1" oninput="graph()" />
-    </div>
-    <div>
-      c: <input type="number" id="c" value="0" step="0.1" oninput="graph()" />
-    </div>
+        <h3>y = ax² + bx + c</h3>
+        <div>
+          a:
+          <input type="number" id="a" value="1" step="0.1" oninput="graph()" />
+        </div>
+        <div>
+          b:
+          <input type="number" id="b" value="2" step="0.1" oninput="graph()" />
+        </div>
+        <div>
+          c:
+          <input type="number" id="c" value="0" step="0.1" oninput="graph()" />
+        </div>
 
-    <p><b>Axis of Symmetry: </b>x = <span id="aos"></span></p>
-    <p><b>Discriminant: </b><span id="discriminant"></span></p>
-    <p><b>Solutions: </b>x = <span id="solutions"></span></p>
+        <p><b>Axis of Symmetry: </b>x = <span id="aos"></span></p>
+        <p><b>Discriminant: </b><span id="discriminant"></span></p>
+        <p><b>Solutions: </b>x = <span id="solutions"></span></p>
+      </div>
+    </div>
   </body>
 </html>

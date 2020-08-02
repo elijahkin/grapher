@@ -1,12 +1,28 @@
 canvas {
   border: 1px solid black;
-  margin-bottom: 20px;
+  align-self: center;
+  margin-left: 50px;
 }
 
 body {
-  margin-left: 20px;
+  font-family: "Lato", sans-serif;
 }
 
-.bold {
-  white-space: nowrap;
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 60%;
+}
+
+.item {
+  padding: 30px;
+  width: 250px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
 }

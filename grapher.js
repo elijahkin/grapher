@@ -22,19 +22,18 @@ function graph() {
   var c = document.getElementById("c").value;
 
   var aos = -b / (2 * a);
-  document.getElementById("aos").innerHTML = aos;
+  document.getElementById("aos").innerHTML = aos.toFixed(3);
 
   var discriminant = b ** 2 - 4 * a * c;
-  document.getElementById("discriminant").innerHTML = discriminant;
+  document.getElementById("discriminant").innerHTML = discriminant.toFixed(3);
 
   if (discriminant > 0) {
     document.getElementById("solutions").innerHTML =
-      aos +
-      discriminant ** 0.5 / (2 * a) +
+      (aos + discriminant ** 0.5 / (2 * a)).toFixed(3) +
       " and " +
-      (aos - discriminant ** 0.5 / (2 * a));
+      (aos - discriminant ** 0.5 / (2 * a)).toFixed(3);
   } else if (discriminant == 0) {
-    document.getElementById("solutions").innerHTML = aos;
+    document.getElementById("solutions").innerHTML = aos.toFixed(3);
   } else {
     document.getElementById("solutions").innerHTML = "No real solutions";
   }
