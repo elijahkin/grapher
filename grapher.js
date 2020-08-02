@@ -20,11 +20,25 @@ function graph() {
   var a = document.getElementById("a").value;
   var b = document.getElementById("b").value;
   var c = document.getElementById("c").value;
-  document.getElementById("roots").innerHTML =
-    (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a) +
-    " and " +
-    (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a);
-  document.getElementById("aos").innerHTML = (-b / 2) * a;
+
+  var aos = -b / (2 * a);
+  document.getElementById("aos").innerHTML = aos;
+
+  var discriminant = b ** 2 - 4 * a * c;
+  document.getElementById("discriminant").innerHTML = discriminant;
+
+  if (discriminant > 0) {
+    document.getElementById("solutions").innerHTML =
+      aos +
+      discriminant ** 0.5 / (2 * a) +
+      " and " +
+      (aos - discriminant ** 0.5 / (2 * a));
+  } else if (discriminant == 0) {
+    document.getElementById("solutions").innerHTML = aos;
+  } else {
+    document.getElementById("solutions").innerHTML = "No real solutions";
+  }
+
   var x;
   var color = document.getElementById("color");
   for (x = -canv.width / 2; x < canv.width / 2; x += 0.01) {

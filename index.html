@@ -7,19 +7,24 @@
   <body onload="graph()">
     <h1>Quadratic Grapher</h1>
     <canvas id="canv" width="300" height="300"></canvas>
+    <div>
+      Graph Color:
+      <input type="color" id="color" value="#4B0082" onchange="graph()" />
+    </div>
 
     <h3>y = ax² + bx + c</h3>
     <div>
-      a: <input type="number" id="a" value="0" step="0.1" oninput="graph()" />
+      a: <input type="number" id="a" value="1" step="0.1" oninput="graph()" />
     </div>
     <div>
-      b: <input type="number" id="b" value="1" step="0.1" oninput="graph()" />
+      b: <input type="number" id="b" value="0" step="0.1" oninput="graph()" />
     </div>
     <div>
       c: <input type="number" id="c" value="0" step="0.1" oninput="graph()" />
     </div>
-    <input type="color" id="color" onchange="graph()" />
-    <p><b>Roots: </b>x = <span id="roots"></span></p>
+
     <p><b>Axis of Symmetry: </b>x = <span id="aos"></span></p>
+    <p><b>Discriminant: </b><span id="discriminant"></span></p>
+    <p><b>Solutions: </b>x = <span id="solutions"></span></p>
   </body>
 </html>
