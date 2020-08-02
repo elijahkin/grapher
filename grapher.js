@@ -20,13 +20,11 @@ function graph() {
   var a = document.getElementById("a").value;
   var b = document.getElementById("b").value;
   var c = document.getElementById("c").value;
-  document.getElementById("aValue").innerHTML = a;
-  document.getElementById("bValue").innerHTML = b;
-  document.getElementById("cValue").innerHTML = c;
   document.getElementById("roots").innerHTML =
     (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a) +
     " and " +
     (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a);
+  document.getElementById("aos").innerHTML = (-b / 2) * a;
   var x;
   var color = document.getElementById("color");
   for (x = -canv.width / 2; x < canv.width / 2; x += 0.01) {
@@ -40,6 +38,6 @@ function graph() {
 Features to add
 - Adjustible View Size / Better Input
 - Axis labels
-- Roots
 - Derivative/integral
+- Critical Points
 */

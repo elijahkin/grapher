@@ -10,39 +10,16 @@
 
     <h3>y = ax² + bx + c</h3>
     <div>
-      a:<input
-        type="range"
-        id="a"
-        min="-10"
-        max="10"
-        value="0"
-        step="0.01"
-        oninput="graph()"
-      /><span id="aValue"></span>
+      a: <input type="number" id="a" value="0" step="0.1" oninput="graph()" />
     </div>
     <div>
-      b:<input
-        type="range"
-        id="b"
-        min="-10"
-        max="10"
-        value="1"
-        step="0.01"
-        oninput="graph()"
-      /><span id="bValue"></span>
+      b: <input type="number" id="b" value="1" step="0.1" oninput="graph()" />
     </div>
     <div>
-      c:<input
-        type="range"
-        id="c"
-        min="-10"
-        max="10"
-        value="0"
-        step="0.01"
-        oninput="graph()"
-      /><span id="cValue"></span>
+      c: <input type="number" id="c" value="0" step="0.1" oninput="graph()" />
     </div>
     <input type="color" id="color" onchange="graph()" />
     <p><b>Roots: </b>x = <span id="roots"></span></p>
+    <p><b>Axis of Symmetry: </b>x = <span id="aos"></span></p>
   </body>
 </html>
