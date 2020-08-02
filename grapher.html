@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Quadratic Grapher</title>
+    <script src="grapher.js"></script>
+    <link rel="stylesheet" type="text/css" href="grapher.css" />
+  </head>
+  <body onload="graph()">
+    <h1>Quadratic Grapher</h1>
+    <canvas id="canv" width="300" height="300"></canvas>
+
+    <h3>y = ax² + bx + c</h3>
+    <div>
+      a:<input
+        type="range"
+        id="a"
+        min="-10"
+        max="10"
+        value="0"
+        step="0.01"
+        oninput="graph()"
+      /><span id="aValue"></span>
+    </div>
+    <div>
+      b:<input
+        type="range"
+        id="b"
+        min="-10"
+        max="10"
+        value="1"
+        step="0.01"
+        oninput="graph()"
+      /><span id="bValue"></span>
+    </div>
+    <div>
+      c:<input
+        type="range"
+        id="c"
+        min="-10"
+        max="10"
+        value="0"
+        step="0.01"
+        oninput="graph()"
+      /><span id="cValue"></span>
+    </div>
+    <input type="color" id="color" onchange="graph()" />
+    <p><b>Roots: </b>x = <span id="roots"></span></p>
+  </body>
+</html>
